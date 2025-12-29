@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
     title: "Adaptive Loan Pricing Engine",
     description: "A Financial Model that optimizes loan interest rates to maximize profit.",
     tags: ["Python", "XGBoost", "Statsmodels", "Streamlit", "Docker"],
-    image: "/assets/loan-buy-house-pressure-buy-house_2560x1707.jpg", // Placeholder
+    image: "/public/assets/loan-buy-house-pressure-buy-house_2560x1707.jpg", // Placeholder
     link: "https://github.com/m-prth/adaptive-pricing-engine"
   },
   {
@@ -91,7 +91,7 @@ export const PROJECTS: Project[] = [
     title: "Data Science Salary Estimator",
     description: "Developed a system to estimate Data Scientist salaries.",
     tags: ["Python", "Scikit-learn", "Pandas", "Flask"],
-    image: "/assets/payday-concept-calendar-with-marker-and-circled-day-of-salary-874346900-3b95ff61632a40d1954a09e7d6374177.jpg", // Placeholder
+    image: "/public/assets/payday-concept-calendar-with-marker-and-circled-day-of-salary-874346900-3b95ff61632a40d1954a09e7d6374177.jpg", // Placeholder
     link: "https://github.com/m-prth/Salary-Estimator"
   },
   {
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
     title: "Text Summarization using LLM",
     description: "Developed a text summarization pipeline using the  Hugging Face transformers.",
     tags: ["Hugging Face", "FastAPI", "Docker", "MLOps"],
-    image: "/assets/a-flat-colorful-illustration-depicting-aylxxlivpqb6rmxk0kkfefanq9tiartquyqqc3rxzybwq-1747814001340-compressed.png", // Placeholder
+    image: "/public/assets/a-flat-colorful-illustration-depicting-aylxxlivpqb6rmxk0kkfefanq9tiartquyqqc3rxzybwq-1747814001340-compressed.png", // Placeholder
     link: "https://github.com/m-prth/poneglyph-processor"
   },
   {
@@ -107,16 +107,16 @@ export const PROJECTS: Project[] = [
     title: "Traffic Sign Classifier",
     description: "Built a CNN to classify images from the German Traffic Signs dataset.",
     tags: ["TensorFlow", "Keras", "Python", "OpenCV"],
-    image: "/assets/traffic_signs.jpg", // Placeholder
+    image: "/public/assets/traffic_signs.jpg", // Placeholder
     link: "https://github.com/m-prth/traffic-sign-classifier"
   }
 ];
 
 export const PHOTOS: Photo[] = [
-  { id: 1, url: "/assets/IMG_0999.jpg", title: "Toronto, ON", aspectRatio: "3/4" },
-  { id: 2, url: "/assets/IMG_2339.JPG", title: "Ottawa, ON", aspectRatio: "3/4" },
-  { id: 3, url: "/assets/IMG_0116.jpg", title: "Whimbrell Point, ON", aspectRatio: "4/3" },
-  { id: 4, url: "/assets/IMG_2911.jpg", title: "Detroit, MI", aspectRatio: "3/4" },
-  { id: 5, url: "/assets/IMG_4089.jpg", title: "Niagara Falls, ON", aspectRatio: "3/4" },
-  { id: 6, url: "/assets/IMG_4703.jpg", title: "Ottawa, ON", aspectRatio: "3/4" },
+  { id: 1, url: "/public/assets/IMG_0999.jpg", title: "Toronto, ON", aspectRatio: "3/4" },
+  { id: 2, url: "/public/assets/IMG_2339.jpg", title: "Ottawa, ON", aspectRatio: "3/4" },
+  { id: 3, url: "/public/assets/IMG_0116.jpg", title: "Whimbrell Point, ON", aspectRatio: "4/3" },
+  { id: 4, url: "/public/assets/IMG_2911.jpg", title: "Detroit, MI", aspectRatio: "3/4" },
+  { id: 5, url: "/public/assets/IMG_4089.jpg", title: "Niagara Falls, ON", aspectRatio: "3/4" },
+  { id: 6, url: "/public/assets/IMG_4703.jpg", title: "Ottawa, ON", aspectRatio: "3/4" },
 ];
