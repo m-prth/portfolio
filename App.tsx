@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <div className="bg-neoWhite min-h-screen text-neoBlack font-sans pattern-grid">
       <Navigation />
-      <main>
+      <main className="pt-20">
         <Hero />
         <div className="space-y-0 relative z-10">
           <Experience />
@@ -22,7 +22,6 @@ const App: React.FC = () => {
           <Contact />
         </div>
       </main>
-
       <PortfolioAssistant />
     </div>
   );

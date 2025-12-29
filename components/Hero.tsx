@@ -66,13 +66,15 @@ const Hero: React.FC = () => {
                 VIEW WORK <ArrowDown size={24} />
               </motion.button>
               
-              <motion.button 
-                whileHover={{ scale: 1.02, boxShadow: '2px 2px 0px 0px var(--neo-shadow)' }}
-                whileTap={{ scale: 0.98, translate: '4px 4px' }}
-                className="bg-neoCard text-neoBlack px-8 py-4 font-black text-lg border-2 border-neoBlack shadow-neo hover:shadow-neo-hover transition-all flex items-center gap-3"
-              >
-                RESUME <Download size={24} />
-              </motion.button>
+            <motion.a 
+              href="../assets/resume.pdf"             // Path to file in public folder
+              download="Parth_Mistry_Resume"  // Name of the file when downloaded
+              whileHover={{ scale: 1.02, boxShadow: '2px 2px 0px 0px var(--neo-shadow)' }}
+              whileTap={{ scale: 0.98, translate: '4px 4px' }}
+              className="bg-neoCard text-neoBlack px-8 py-4 font-black text-lg border-2 border-neoBlack shadow-neo hover:shadow-neo-hover transition-all flex items-center gap-3 cursor-pointer"
+            >
+              RESUME <Download size={24} />
+            </motion.a>
             </div>
           </div>
 
