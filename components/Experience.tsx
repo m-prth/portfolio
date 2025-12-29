@@ -10,7 +10,7 @@ const Experience: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="bg-white border-4 border-neoBlack shadow-neo-lg p-8 md:p-12 mb-16">
           <h2 className="text-5xl md:text-6xl font-display font-black text-neoBlack mb-4 uppercase">
-            EXPERIENCE_LOG<span className="text-neoRed">.txt</span>
+            XP_LOG<span className="text-neoRed">.txt</span>
           </h2>
           <p className="font-mono text-lg font-bold text-gray-600">
             // Executing career path subroutine...
