@@ -113,10 +113,10 @@ export const PROJECTS: Project[] = [
 ];
 
 export const PHOTOS: Photo[] = [
-  { id: 1, url: "/assets/IMG_0999.jpg", title: "Toronto, ON", aspectRatio: "3/4" },
-  { id: 2, url: "/assets/IMG_2339.JPG", title: "Ottawa, ON", aspectRatio: "3/4" },
-  { id: 3, url: "/assets/IMG_0116.jpg", title: "Whimbrell Point, ON", aspectRatio: "4/3" },
-  { id: 4, url: "/assets/IMG_2911.jpg", title: "Detroit, MI", aspectRatio: "3/4" },
-  { id: 5, url: "/assets/IMG_4089.jpg", title: "Niagara Falls, ON", aspectRatio: "3/4" },
-  { id: 6, url: "/assets/IMG_4703.jpg", title: "Ottawa, ON", aspectRatio: "3/4" },
+  { id: 1, url: "/assets/IMG_0999.jpg", thumbnailUrl: "/assets/IMG_0999-thumb.jpg", title: "Toronto, ON", aspectRatio: "3/4" },
+  { id: 2, url: "/assets/IMG_2339.JPG", thumbnailUrl: "/assets/IMG_2339-thumb.jpg", title: "Ottawa, ON", aspectRatio: "3/4" },
+  { id: 3, url: "/assets/IMG_0116.jpg", thumbnailUrl: "/assets/IMG_0116-thumb.jpg", title: "Whimbrell Point, ON", aspectRatio: "4/3" },
+  { id: 4, url: "/assets/IMG_2911.jpg", thumbnailUrl: "/assets/IMG_2911-thumb.jpg", title: "Detroit, MI", aspectRatio: "3/4" },
+  { id: 5, url: "/assets/IMG_4089.jpg", thumbnailUrl: "/assets/IMG_4089-thumb.jpg", title: "Niagara Falls, ON", aspectRatio: "3/4" },
+  { id: 6, url: "/assets/IMG_4703.jpg", thumbnailUrl: "/assets/IMG_4703-thumb.jpg", title: "Ottawa, ON", aspectRatio: "3/4" },
 ];

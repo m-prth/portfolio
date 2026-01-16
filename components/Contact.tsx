@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
             HIT ME UP
           </h2>
           <p className="text-xl font-bold text-neoBlack mb-12 max-w-lg mx-auto">
-            Want to talk about Soccer, F1, video games, photography or mechanical keyboards?
+            Want to talk about soccer, F1, video games, watches, photography or mechanical keyboards?
           </p>
 
           <div className="flex justify-center gap-6 mb-12">
@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
           </div> */}
 
           <footer className="mt-16 text-neoBlack font-mono font-bold text-sm opacity-50">
-            © 2025 PARTH MISTRY. BUILT DIFFERENTLY.
+            © 2026 PARTH MISTRY. BUILT DIFFERENTLY.
           </footer>
         </div>
       </div>

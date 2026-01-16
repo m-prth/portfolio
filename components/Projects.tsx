@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
             </h2>
           </div>
           <a href={CONTACT_CONTENT.github} className="bg-white text-neoBlack border-4 border-neoBlack px-6 py-3 font-bold shadow-neo hover:shadow-neo-hover active:shadow-none active:translate-y-1 transition-all flex items-center gap-2 mt-6 md:mt-0">
-            <Github size={20} /> GITHUB_REPO
+            <Github size={20} /> GITHUB
           </a>
         </div>
 
@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
                   rel="noopener noreferrer"
                   className="w-full bg-neoYellow text-neoBlack border-4 border-neoBlack py-3 font-black uppercase tracking-wider shadow-neo hover:bg-neoOrange transition-colors flex items-center justify-center gap-2 group-hover:shadow-neo-hover group-hover:translate-x-[2px] group-hover:translate-y-[2px]"
                 >
-    Launch Project <ExternalLink size={18} />
+    Open Project <ExternalLink size={18} />
 </a>
               </div>
             </motion.div>

@@ -19,6 +19,7 @@ export interface Experience {
 export interface Photo {
   id: number;
   url: string;
+  thumbnailUrl: string;
   title: string;
   aspectRatio: string; // '1/1' | '4/3' | '16/9' | '3/4'
 }

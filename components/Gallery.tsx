@@ -7,6 +7,9 @@ import { Camera, X, Eye } from 'lucide-react';
 const Gallery: React.FC = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null);
 
+  // Helper to find the currently selected photo object
+  const activePhoto = PHOTOS.find(p => p.id === selectedPhoto);
+
   return (
     <section id={SectionId.Gallery} className="py-24 bg-neoYellow border-t-4 border-neoBlack">
       <div className="container mx-auto px-6">
@@ -29,11 +32,16 @@ const Gallery: React.FC = () => {
               onClick={() => setSelectedPhoto(photo.id)}
             >
               <div className="overflow-hidden border-2 border-neoBlack relative">
-                <img 
-                  src={photo.url} 
+                {/* UPDATED: Uses photo.thumbnailUrl. 
+                   Falls back to photo.url if thumbnail is missing to prevent crashes.
+                */}
+                <img  
+                  src={photo.thumbnailUrl || photo.url} 
                   alt={photo.title} 
                   className="w-full h-auto object-cover filter contrast-125 hover:contrast-100 transition-all"
                   loading="lazy"
+                  width={400} // Optional: Helps browser reserve space
+                  height={300} // Optional: Helps browser reserve space
                 />
                 <div className="absolute inset-0 bg-neoBlue/0 group-hover:bg-neoBlue/20 transition-colors flex items-center justify-center">
                    <Eye className="text-white opacity-0 group-hover:opacity-100 w-12 h-12 drop-shadow-lg" />
@@ -50,7 +58,7 @@ const Gallery: React.FC = () => {
 
       {/* Lightbox Modal */}
       <AnimatePresence>
-        {selectedPhoto !== null && (
+        {selectedPhoto !== null && activePhoto && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -58,17 +66,22 @@ const Gallery: React.FC = () => {
             className="fixed inset-0 z-50 bg-neoBlack/90 flex items-center justify-center p-4 backdrop-blur-sm"
             onClick={() => setSelectedPhoto(null)}
           >
-            <button className="absolute top-6 right-6 bg-neoRed text-white border-4 border-white p-2 hover:bg-white hover:text-neoRed hover:border-neoRed transition-colors">
+            <button className="absolute top-6 right-6 bg-neoRed text-white border-4 border-white p-2 hover:bg-white hover:text-neoRed hover:border-neoRed transition-colors z-50">
               <X size={32} />
             </button>
-            <div className="bg-white p-4 border-4 border-white shadow-2xl max-h-[90vh] max-w-[90vw]">
+            <div 
+              className="bg-white p-4 border-4 border-white shadow-2xl max-h-[90vh] max-w-[90vw] relative"
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image wrapper
+            >
+              {/* UPDATED: Uses activePhoto.url (The high-res version)
+              */}
                <img 
-                src={PHOTOS.find(p => p.id === selectedPhoto)?.url} 
+                src={activePhoto.url} 
                 className="max-h-[80vh] object-contain border-2 border-neoBlack"
-                alt="Full view" 
+                alt={activePhoto.title} 
               />
               <div className="mt-4 font-black text-xl text-center uppercase">
-                {PHOTOS.find(p => p.id === selectedPhoto)?.title}
+                {activePhoto.title}
               </div>
             </div>
           </motion.div>
