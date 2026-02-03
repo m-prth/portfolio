@@ -52,7 +52,7 @@ const Gallery: React.FC = () => {
                   width={400}
                   height={300}
                 />
-                <div className="absolute inset-0 bg-neoBlue/0 dark:bg-neoPurple/0 group-hover:bg-neoBlue/20 dark:group-hover:bg-neoPurple/20 transition-colors flex items-center justify-center">
+                <div className="absolute inset-0 bg-neoBlue/0 dark:bg-darkAccent/0 group-hover:bg-neoBlue/20 dark:group-hover:bg-neoPurple/20 transition-colors flex items-center justify-center">
                   <Eye className="text-white opacity-0 group-hover:opacity-100 w-12 h-12 drop-shadow-lg" />
                 </div>
               </div>

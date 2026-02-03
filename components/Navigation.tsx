@@ -25,7 +25,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 border-b-4 border-neoBlack dark:border-neoWhite bg-neoYellow dark:bg-neoPurple transition-colors duration-300">
+    <nav className="fixed top-0 w-full z-50 border-b-4 border-neoBlack dark:border-neoWhite bg-neoYellow dark:bg-darkAccent transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-8 h-20 flex justify-between items-center">
         {/* Logo */}
         <motion.div
@@ -53,7 +53,7 @@ const Navigation: React.FC = () => {
             onClick={toggleTheme}
             whileHover={{ scale: 1.1, rotate: 180 }}
             whileTap={{ scale: 0.9 }}
-            className="p-3 bg-neoBlack dark:bg-neoWhite text-neoYellow dark:text-neoPurple border-2 border-neoBlack dark:border-neoWhite shadow-neo-sm dark:shadow-neo-dark-sm hover:shadow-neo dark:hover:shadow-neo-dark transition-all"
+            className="p-3 bg-neoBlack dark:bg-neoWhite text-neoYellow dark:text-darkAccent border-2 border-neoBlack dark:border-neoWhite shadow-neo-sm dark:shadow-neo-dark-sm hover:shadow-neo dark:hover:shadow-neo-dark transition-all"
             aria-label="Toggle theme"
           >
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
@@ -72,7 +72,7 @@ const Navigation: React.FC = () => {
           {/* Mobile Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 bg-neoBlack dark:bg-neoWhite text-neoYellow dark:text-neoPurple border-2 border-neoBlack dark:border-neoWhite shadow-neo-sm dark:shadow-neo-dark-sm"
+            className="p-2 bg-neoBlack dark:bg-neoWhite text-neoYellow dark:text-darkAccent border-2 border-neoBlack dark:border-neoWhite shadow-neo-sm dark:shadow-neo-dark-sm"
             aria-label="Toggle theme"
           >
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}

@@ -143,7 +143,7 @@ const PortfolioAssistant: React.FC<PortfolioAssistantProps> = ({
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyPress}
                   placeholder="ENTER COMMAND..."
-                  className="w-full bg-white dark:bg-gray-900 border-4 border-neoBlack dark:border-neoWhite py-3 pl-4 pr-12 font-mono font-bold text-neoBlack dark:text-neoWhite focus:outline-none focus:bg-neoYellow dark:focus:bg-neoPurple transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                  className="w-full bg-white dark:bg-gray-900 border-4 border-neoBlack dark:border-neoWhite py-3 pl-4 pr-12 font-mono font-bold text-neoBlack dark:text-neoWhite focus:outline-none focus:bg-neoYellow dark:focus:bg-darkAccent transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500"
                 />
                 <button
                   onClick={handleSend}

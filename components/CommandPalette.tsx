@@ -253,7 +253,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ onOpenChat }) => {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Type a command or search..."
-                  className="w-full bg-neoWhite dark:bg-neoBlack text-neoBlack dark:text-neoWhite pl-12 pr-4 py-4 font-mono font-bold text-lg focus:outline-none focus:bg-neoYellow/20 dark:focus:bg-neoPurple/20 transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                  className="w-full bg-neoWhite dark:bg-neoBlack text-neoBlack dark:text-neoWhite pl-12 pr-4 py-4 font-mono font-bold text-lg focus:outline-none focus:bg-neoYellow/20 dark:focus:bg-darkAccent/20 transition-colors placeholder:text-gray-400 dark:placeholder:text-gray-500"
                 />
                 <kbd className="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-200 dark:bg-gray-800 border-2 border-neoBlack dark:border-neoWhite text-xs font-bold">
                   ESC

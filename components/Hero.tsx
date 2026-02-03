@@ -20,10 +20,6 @@ const Marquee: React.FC<{ text: string; direction?: 'left' | 'right' }> = ({ tex
 const Hero: React.FC = () => {
   return (
     <section id={SectionId.Hero} className="relative min-h-screen flex flex-col pt-20 overflow-hidden bg-neoWhite dark:bg-neoBlack transition-colors duration-300">
-      {/* Background Blobs */}
-      <div className="absolute top-20 right-[-100px] w-[400px] h-[400px] bg-neoPurple rounded-full border-4 border-neoBlack dark:border-neoWhite mix-blend-multiply dark:mix-blend-screen opacity-20 blur-none" />
-      <div className="absolute bottom-0 left-[-100px] w-[300px] h-[300px] bg-neoOrange rounded-full border-4 border-neoBlack dark:border-neoWhite mix-blend-multiply dark:mix-blend-screen opacity-20 blur-none" />
-
       <div className="container mx-auto px-6 pt-12 flex-grow flex flex-col justify-center relative z-20">
         <div className="grid md:grid-cols-12 gap-12 items-center">
 
@@ -53,7 +49,7 @@ const Hero: React.FC = () => {
 
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl font-display text-neoBlack dark:text-neoWhite border-l-8 border-neoYellow dark:border-neoPurple pl-6 mb-10 max-w-xl"
+              className="text-xl md:text-2xl font-display text-neoBlack dark:text-neoWhite border-l-8 border-neoYellow dark:border-darkAccent pl-6 mb-10 max-w-xl"
             >
               {HERO_CONTENT.headline}
             </motion.p>

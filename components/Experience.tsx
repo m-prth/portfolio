@@ -95,7 +95,7 @@ const Experience: React.FC = () => {
                           key={i}
                           variants={scaleIn}
                           whileHover={{ scale: 1.1, rotate: Math.random() * 6 - 3 }}
-                          className="text-xs font-black px-2 py-1 bg-neoYellow dark:bg-neoPurple text-neoBlack dark:text-neoWhite border-2 border-neoBlack dark:border-neoWhite shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(240,240,240,0.4)] cursor-default"
+                          className="text-xs font-black px-2 py-1 bg-neoYellow dark:bg-darkAccent text-neoBlack dark:text-neoWhite border-2 border-neoBlack dark:border-neoWhite shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(240,240,240,0.4)] cursor-default"
                         >
                           {skill}
                         </motion.span>

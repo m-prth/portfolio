@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
                   alt={project.title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-neoBlue/20 dark:bg-neoPurple/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-neoBlue/20 dark:bg-darkAccent/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
               {/* Content Area */}
@@ -92,7 +92,7 @@ const Projects: React.FC = () => {
                   ))}
                 </motion.div>
 
-                <p className="text-neoBlack dark:text-neoWhite font-medium mb-8 flex-grow border-l-4 border-neoYellow dark:border-neoPurple pl-4">
+                <p className="text-neoBlack dark:text-neoWhite font-medium mb-8 flex-grow border-l-4 border-neoYellow dark:border-darkAccent pl-4">
                   {project.description}
                 </p>
 
@@ -102,7 +102,7 @@ const Projects: React.FC = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-neoYellow dark:bg-neoPurple text-neoBlack dark:text-neoWhite border-4 border-neoBlack dark:border-neoWhite py-3 font-black uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:bg-neoOrange dark:hover:bg-neoBlue transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-neoYellow dark:bg-darkAccent text-neoBlack dark:text-neoWhite border-4 border-neoBlack dark:border-neoWhite py-3 font-black uppercase tracking-wider shadow-neo dark:shadow-neo-dark hover:bg-neoOrange dark:hover:bg-neoBlue transition-colors flex items-center justify-center gap-2"
                 >
                   Open Project <ExternalLink size={18} />
                 </motion.a>

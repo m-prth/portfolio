@@ -31,7 +31,7 @@ const SkillCard: React.FC<{ title: string; skills: string[]; icon: React.ReactNo
           key={idx}
           variants={scaleIn}
           whileHover={{ scale: 1.1, rotate: Math.random() * 10 - 5 }}
-          className="cursor-default px-4 py-2 font-bold text-neoBlack dark:text-neoWhite bg-neoWhite dark:bg-gray-900 border-2 border-neoBlack dark:border-neoWhite shadow-[2px_2px_0px_0px_#000] dark:shadow-[2px_2px_0px_0px_rgba(240,240,240,0.3)] hover:bg-neoYellow dark:hover:bg-neoPurple transition-colors"
+          className="cursor-default px-4 py-2 font-bold text-neoBlack dark:text-neoWhite bg-neoWhite dark:bg-gray-900 border-2 border-neoBlack dark:border-neoWhite shadow-[2px_2px_0px_0px_#000] dark:shadow-[2px_2px_0px_0px_rgba(240,240,240,0.3)] hover:bg-neoYellow dark:hover:bg-darkAccent transition-colors"
         >
           {skill}
         </motion.div>
