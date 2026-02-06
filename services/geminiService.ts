@@ -1,7 +1,7 @@
 // Client-side service that calls our Express API endpoint
 export const sendMessageToGemini = async (message: string): Promise<{ text?: string; error?: string }> => {
   try {
-    const response = await fetch('/api/chat', {
+    const response = await fetch('/api/assistant', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
