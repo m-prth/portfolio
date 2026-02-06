@@ -22,6 +22,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ onOpenChat }) => {
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+  const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const { theme, toggleTheme } = useTheme();
 
   // Scroll helper
@@ -199,6 +200,16 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ onOpenChat }) => {
     setSelectedIndex(0);
   }, [query]);
 
+  // Auto-scroll to selected item
+  useEffect(() => {
+    if (isOpen && itemRefs.current[selectedIndex]) {
+      itemRefs.current[selectedIndex]?.scrollIntoView({
+        block: 'nearest',
+        behavior: 'smooth'
+      });
+    }
+  }, [selectedIndex, isOpen]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -271,6 +282,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ onOpenChat }) => {
                     {filteredCommands.map((command, index) => (
                       <motion.button
                         key={command.id}
+                        ref={(el) => { itemRefs.current[index] = el; }}
                         onClick={command.action}
                         onMouseEnter={() => setSelectedIndex(index)}
                         initial={{ opacity: 0, x: -10 }}
