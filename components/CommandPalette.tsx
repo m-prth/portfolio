@@ -58,7 +58,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ onOpenChat }) => {
       label: 'Go to About',
       description: 'Learn about me',
       icon: <User size={18} />,
-      action: () => scrollToSection(SectionId.About),
+      action: () => scrollToSection(SectionId.Hero),
       keywords: ['about', 'bio', 'me', 'info']
     },
     {
