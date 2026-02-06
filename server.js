@@ -45,7 +45,7 @@ Rules:
 `;
 
 // API endpoint for chat
-app.post('/api/chat', async (req, res) => {
+app.post('/api/assistant', async (req, res) => {
   const apiKey = process.env.GEMINI_API_KEY;
 
   if (!apiKey) {
