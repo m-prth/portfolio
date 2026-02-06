@@ -1,70 +1,80 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { SectionId } from '../types';
-import { Mail, Linkedin, Github, Instagram, Send } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 import { CONTACT_CONTENT } from '@/constants';
+import { fadeInUp, scaleIn, staggerContainer, viewportConfig } from '../utils/animations';
 
 const Contact: React.FC = () => {
   return (
-    <section id={SectionId.Contact} className="py-24 bg-neoBlue border-t-4 border-neoBlack">
+    <section id={SectionId.Contact} className="py-24 bg-neoBlue dark:bg-gradient-to-br dark:from-neoBlue/20 dark:to-neoPurple/10 border-t-4 border-neoBlack dark:border-neoWhite transition-colors duration-300">
       <div className="container mx-auto px-6 max-w-4xl">
-        <div className="bg-neoWhite border-4 border-neoBlack shadow-neo-lg p-8 md:p-16 text-center relative overflow-hidden">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+          variants={staggerContainer}
+          className="bg-neoWhite dark:bg-neoBlack border-4 border-neoBlack dark:border-neoWhite shadow-neo-lg dark:shadow-neo-dark-lg p-8 md:p-16 text-center relative overflow-hidden"
+        >
           {/* Decorative background stripes */}
-          <div className="absolute top-0 left-0 w-full h-4 bg-neoRed border-b-4 border-neoBlack"></div>
-          
-          <h2 className="text-5xl md:text-7xl font-display font-black text-neoBlack mb-6 mt-4 uppercase">
-            HIT ME UP
-          </h2>
-          <p className="text-xl font-bold text-neoBlack mb-12 max-w-lg mx-auto">
-            Want to talk about soccer, F1, video games, watches, photography or mechanical keyboards?
-          </p>
+          <div className="absolute top-0 left-0 w-full h-4 bg-neoRed border-b-4 border-neoBlack dark:border-neoWhite"></div>
 
-          <div className="flex justify-center gap-6 mb-12">
+          <motion.h2
+            variants={fadeInUp}
+            className="text-5xl md:text-7xl font-display font-black text-neoBlack dark:text-neoWhite mb-6 mt-4 uppercase"
+          >
+            HIT ME UP
+          </motion.h2>
+          <motion.p
+            variants={fadeInUp}
+            className="text-xl font-bold text-neoBlack dark:text-neoWhite mb-12 max-w-lg mx-auto"
+          >
+            Want to talk about soccer, F1, video games, watches, photography or mechanical keyboards?
+          </motion.p>
+
+          <motion.div
+            variants={staggerContainer}
+            className="flex justify-center gap-6 mb-12"
+          >
             {[
-              { 
-                icon: <Linkedin size={24} />, 
-                bg: 'bg-blue-600', 
-                href: CONTACT_CONTENT.linkedin 
+              {
+                icon: <Linkedin size={24} />,
+                bg: 'bg-blue-600',
+                href: CONTACT_CONTENT.linkedin
               },
-              { 
-                icon: <Github size={24} />, 
-                bg: 'bg-gray-800', 
-                href: CONTACT_CONTENT.github 
+              {
+                icon: <Github size={24} />,
+                bg: 'bg-gray-800 dark:bg-gray-700',
+                href: CONTACT_CONTENT.github
               },
-              { 
-                icon: <Mail size={24} />, 
-                bg: 'bg-red-500', 
-                href: `mailto:${CONTACT_CONTENT.email}` // Added mailto: prefix
+              {
+                icon: <Mail size={24} />,
+                bg: 'bg-red-500',
+                href: `mailto:${CONTACT_CONTENT.email}`
               }
             ].map((item, i) => (
-              <a 
-                key={i} 
+              <motion.a
+                key={i}
+                variants={scaleIn}
+                whileHover={{ scale: 1.1, rotate: 10 }}
+                whileTap={{ scale: 0.9 }}
                 href={item.href}
-                target={item.href.startsWith('http') ? "_blank" : "_self"} // Opens links in new tab, keeps email in same
+                target={item.href.startsWith('http') ? "_blank" : "_self"}
                 rel="noopener noreferrer"
-                className={`${item.bg} text-white p-4 border-4 border-neoBlack shadow-neo hover:shadow-neo-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all active:shadow-none active:translate-y-1`}
+                className={`${item.bg} text-white p-4 border-4 border-neoBlack dark:border-neoWhite shadow-neo dark:shadow-neo-dark hover:shadow-neo-hover dark:hover:shadow-neo-dark-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all active:shadow-none active:translate-y-1`}
               >
                 {item.icon}
-              </a>
+              </motion.a>
             ))}
-          </div>
+          </motion.div>
 
-          {/* <div className="bg-neoYellow p-8 border-4 border-neoBlack shadow-neo transform -rotate-1">
-            <div className="flex flex-col md:flex-row gap-4">
-              <input 
-                type="email" 
-                placeholder="YOUR_EMAIL@ADDRESS.COM" 
-                className="flex-1 bg-white border-4 border-neoBlack px-6 py-4 text-neoBlack font-bold placeholder:text-gray-400 focus:outline-none focus:ring-4 focus:ring-neoBlue"
-              />
-              <button className="bg-neoBlack text-white font-black px-8 py-4 text-lg border-4 border-neoBlack hover:bg-white hover:text-neoBlack transition-colors flex items-center justify-center gap-2">
-                SEND IT <Send size={20} />
-              </button>
-            </div>
-          </div> */}
-
-          <footer className="mt-16 text-neoBlack font-mono font-bold text-sm opacity-50">
+          <motion.footer
+            variants={fadeInUp}
+            className="mt-16 text-neoBlack dark:text-neoWhite font-mono font-bold text-sm opacity-50"
+          >
             © 2026 PARTH MISTRY. BUILT DIFFERENTLY.
-          </footer>
-        </div>
+          </motion.footer>
+        </motion.div>
       </div>
     </section>
   );
