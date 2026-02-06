@@ -9,7 +9,7 @@ const Navigation: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
-    { id: SectionId.About, label: 'About' },
+    { id: SectionId.Hero, label: 'About' },
     { id: SectionId.Experience, label: 'XP' },
     { id: SectionId.Projects, label: 'Works' },
     { id: SectionId.Gallery, label: 'Photos' },
