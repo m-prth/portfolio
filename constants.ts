@@ -71,45 +71,45 @@ export const EXPERIENCES: Experience[] = [
 ];
 
 export const SKILLS = {
-  engineering: ["Python", "SQL", "Hadoop", "Spark", "Airflow"],
+  engineering: ["Python", "SQL", "Hadoop", "Spark", "Airflow", "dbt"],
   bi: ["Power BI", "DAX", "KPI Design", "Data Modeling", "Excel", "Project Management"],
   ai: ["Pandas", "NumPy", "Scikit-learn", "Hugging Face", "TensorFlow", "OpenCV", "NLTK"],
   devops: ["Docker", "Kubernetes", "Git", "CI/CD", "GCP"]
 };
 
 export const PROJECTS: Project[] = [
-    {
+  {
     id: 1,
     title: "Adaptive Loan Pricing Engine",
     description: "A Financial Model that optimizes loan interest rates to maximize profit.",
     tags: ["Python", "XGBoost", "Statsmodels", "Streamlit", "Docker"],
-    image: "/assets/loan-buy-house-pressure-buy-house_2560x1707.jpg", // Placeholder
+    image: "/assets/loan-buy-house-pressure-buy-house_2560x1707.jpg",
     link: "https://github.com/m-prth/adaptive-pricing-engine"
   },
   {
     id: 2,
-    title: "Data Science Salary Estimator",
-    description: "Developed a system to estimate Data Scientist salaries.",
-    tags: ["Python", "Scikit-learn", "Pandas", "Flask"],
-    image: "/assets/payday-concept-calendar-with-marker-and-circled-day-of-salary-874346900-3b95ff61632a40d1954a09e7d6374177.jpg", // Placeholder
-    link: "https://github.com/m-prth/Salary-Estimator"
+    title: "E-Commerce Medallion Pipeline",
+    description: "A medallion pipeline with a dashboard for Brazilian E-Commerce analytics.",
+    tags: ["Airflow", "dbt", "DuckDB", "MinIO", "Docker", "Polars"],
+    image: "/assets/ecommerce.jpeg",
+    link: "https://github.com/m-prth/medallion-pipeline"
   },
   {
     id: 3,
-    title: "Text Summarization using LLM",
-    description: "Developed a text summarization pipeline using the  Hugging Face transformers.",
-    tags: ["Hugging Face", "FastAPI", "Docker", "MLOps"],
-    image: "/assets/a-flat-colorful-illustration-depicting-aylxxlivpqb6rmxk0kkfefanq9tiartquyqqc3rxzybwq-1747814001340-compressed.png", // Placeholder
-    link: "https://github.com/m-prth/poneglyph-processor"
+    title: "Data Science Salary Estimator",
+    description: "Developed a system to estimate Data Scientist salaries.",
+    tags: ["Python", "Scikit-learn", "Pandas", "Flask"],
+    image: "/assets/payday-concept-calendar-with-marker-and-circled-day-of-salary-874346900-3b95ff61632a40d1954a09e7d6374177.jpg",
+    link: "https://github.com/m-prth/Salary-Estimator"
   },
   {
     id: 4,
-    title: "Traffic Sign Classifier",
-    description: "Built a CNN to classify images from the German Traffic Signs dataset.",
-    tags: ["TensorFlow", "Keras", "Python", "OpenCV"],
-    image: "/assets/traffic_signs.jpg", // Placeholder
-    link: "https://github.com/m-prth/traffic-sign-classifier"
-  }
+    title: "Text Summarization using LLM",
+    description: "Developed a text summarization pipeline using the  Hugging Face transformers.",
+    tags: ["Hugging Face", "FastAPI", "Docker", "MLOps"],
+    image: "/assets/a-flat-colorful-illustration-depicting-aylxxlivpqb6rmxk0kkfefanq9tiartquyqqc3rxzybwq-1747814001340-compressed.png",
+    link: "https://github.com/m-prth/poneglyph-processor"
+  },
 ];
 
 export const PHOTOS: Photo[] = [
